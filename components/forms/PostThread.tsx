@@ -21,7 +21,6 @@ import { createThread } from "@/lib/actions/thread.actions";
 import { Button } from "../ui/button";
 
 function PostThread({ userId }: { userId: string }) {
-  console.log(userId);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -62,7 +61,6 @@ function PostThread({ userId }: { userId: string }) {
               <FormControl className="no-focus border border-dark-4 bg-dark-3 text-light-1">
                 <Textarea
                   rows={15}
-                  type="text"
                   className="account-form_input no-focus"
                   {...field}
                 />
