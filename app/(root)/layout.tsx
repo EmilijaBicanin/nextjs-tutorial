@@ -26,7 +26,7 @@ export default function RootLayout({
           <Topbar />
           <main className="flex flex-row">
             <LeftSidebar />
-            <section className="main-container">
+            <section className="main-container overflow-auto">
               <div className="w-full max-w-4xl">{children}</div>
             </section>
 

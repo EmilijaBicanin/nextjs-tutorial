@@ -38,7 +38,11 @@ const UserCard = ({
       </div>
       <Button
         className="user-card_btn"
-        onClick={() => router.push(`/profile/${id}`)}
+        onClick={() =>
+          router.push(
+            `/${personType === "User" ? "profile" : "communities"}/${id}`
+          )
+        }
       >
         View
       </Button>
