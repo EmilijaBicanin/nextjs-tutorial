@@ -1,10 +1,12 @@
 import { currentUser } from "@clerk/nextjs";
 import { createUploadthing } from "uploadthing/next";
-import { UploadThingError } from "uploadthing/server";
+import { FileRouter, UploadThingError } from "uploadthing/server";
 
 const f = createUploadthing();
 
-const getUser = async () => await currentUser;
+const getUser = async () => {
+  return await currentUser();
+};
 
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
